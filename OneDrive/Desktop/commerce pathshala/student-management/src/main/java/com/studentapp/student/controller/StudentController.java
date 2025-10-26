@@ -16,36 +16,36 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    // --- 1. CREATE Student ---
-    // POST /api/students
+    //  CREATE 
+    
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
         return studentService.createStudent(student);
     }
 
-    // --- 2. READ (All) ---
-    // GET /api/students
+    //  READ (All) ---
+     
     @GetMapping
     public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
 
-    // --- 3. READ (by ID) ---
-    // GET /api/students/1
+    //  READ (by ID) ---
+    
     @GetMapping("/{id}")
     public Student getStudentById(@PathVariable Long id) {
         return studentService.getStudentById(id);
     }
 
-    // --- 4. UPDATE Student ---
-    // PUT /api/students/1
+    // UPDATE 
+    
     @PutMapping("/{id}")
     public Student updateStudent(@PathVariable Long id, @RequestBody Student studentDetails) {
         return studentService.updateStudent(id, studentDetails);
     }
 
-    // --- 5. DELETE Student ---
-    // DELETE /api/students/1
+    //  DELETE 
+    
     @DeleteMapping("/{id}")
     public String deleteStudent(@PathVariable Long id) {
         studentService.deleteStudent(id);

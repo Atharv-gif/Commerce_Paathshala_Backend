@@ -7,9 +7,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.studentapp.teacher.entity.Teacher;
-import com.studentapp.teacher.exception.ResourceNotFoundException;
 import com.studentapp.teacher.repository.TeacherRepository;
-
+import com.studentapp.exception.ResourceNotFoundException; 
 @Service
 
 
