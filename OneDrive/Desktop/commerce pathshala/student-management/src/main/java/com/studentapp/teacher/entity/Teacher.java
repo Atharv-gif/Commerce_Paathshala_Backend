@@ -21,7 +21,7 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Mysql will auto increment number , when the new teacher will add
     private Long id;
 
-    @Column(name = "firebase_uid")
+    @Column(name = "firebase_uid", nullable = false, unique = true)
     private String firebaseUid;
 
     @Column(nullable = false)
